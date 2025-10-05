@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pila de botón de litio CR1220 de 12 mm de diámetro y 3 V (CR1220)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2em 0;
+        }
+
+        .product-detail-card {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-header {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 1.5em;
+        }
+        
+        .product-main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            margin-bottom: 2em;
+        }
+
+        .description-section {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .image-specs-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .product-image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .additional-specs {
+            margin-top: 2em;
+            padding-top: 1.5em;
+            border-top: 1px solid #eee;
+        }
+
+        .additional-specs h3 {
+            color: #007bff;
+        }
+
+        .additional-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .additional-specs ul li {
+            background-color: #f9f9f9;
+            margin-bottom: 0.5em;
+            padding: 0.8em;
+            border-radius: 4px;
+        }
+        .additional-specs ul li strong {
+            color: #e67e22;
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #e67e22;
+            font-weight: bold;
+            margin-bottom: 1.5em;
+            text-align: right;
+        }
+        
+        .purchase-options {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            margin-top: 1em;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .quantity-control button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .quantity-control input {
+            width: 3em;
+            text-align: center;
+            border: none;
+            font-size: 1em;
+            -moz-appearance: textfield; /* Para Firefox */
+        }
+        .quantity-control input::-webkit-outer-spin-button,
+        .quantity-control input::-webkit-inner-spin-button {
+            -webkit-appearance: none; /* Para Chrome, Safari, Edge */
+            margin: 0;
+        }
+        .add-to-cart-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #218838;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .total-price {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #e67e22;
+            text-align: right;
+            margin-top: 1em;
+        }
+        .total-price span {
+            font-size: 0.8em;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .product-main-content {
+                flex-direction: column;
+            }
+            .description-section, .image-specs-section {
+                flex: none;
+                width: 100%;
+                min-width: unset;
+            }
+            .product-price {
+                text-align: left;
+            }
+            .purchase-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="catalogo.html" class="back-link">&larr; Volver al Catálogo</a>
+
+        <div class="product-detail-card">
+            <h1 class="product-header">Pila de botón de litio CR1220 de 12 mm de diámetro y 3 V (CR1220)</h1>
+            
+            <div class="product-main-content">
+                
+                <div class="description-section">
+                    <p>Descripción
+                       Estas son las baterías de mayor calidad y capacidad, las mismas que se envían con iCufflinks, iNecklace, Datalogging y GPS Shields, GPS HAT, etc. Una batería por pedido (querrá una batería por gemelo o colgante).
+
+La marca puede variar, pero todas las marcas de baterías están verificadas para tener el mismo voltaje nominal de 3.0 V y una capacidad nominal de 40 mAh.
+                    </p>
+                    <p id="product-base-price" style="display: none;">0.95</p>
+                    
+                    <div class="purchase-options">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity(-1)">-</button>
+                            <input type="number" id="quantity" value="1" min="1">
+                            <button onclick="changeQuantity(1)">+</button>
+                        </div>
+
+                        <button class="add-to-cart-btn" onclick="addToCart()">Añadir al Carrito</button>
+
+
+                    </div>
+
+                    <p class="total-price">
+                        Total: $<span id="total-price">$0.95</span>
+                    </p>
+                </div>
+
+                <div class="image-specs-section">
+                    <div class="product-image-gallery">
+                        <img src="https://cdn-shop.adafruit.com/970x728/380-01.jpg" >
+                        <img src="https://cdn-shop.adafruit.com/970x728/380-02.jpg" >
+                    
+                    </div>
+
+                  
+                    </div>
+                </div>
+            </div>
+            
+            <div class="full-description">
+                <h3>Notas de seguridad adicionales:</h3>
+               
+                <p> ¡No use un cargador de NiMH/NiCad/plomo-ácido! Además, no maltrate estas baterías, no las cortocircuite, doble, aplaste ni perfore. Nunca las cargue ni las use sin supervisión. Siempre inspeccione las baterías y los circuitos circundantes constantemente para detectar cualquier daño, cableado suelto o la posibilidad de cortocircuitos. La polaridad coincide con todos los cargadores y placas Adafruit LiPoly/LiIon; otras marcas pueden tener polaridad inversa y pueden destruir su batería. Al igual que con todas las baterías de polímero de iones de litio y con cualquier fuente de energía, deben ser utilizadas por expertos que se sientan cómodos trabajando con fuentes de alimentación.</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        const basePrice = 0.95;
+        const quantityInput = document.getElementById('quantity');
+        const totalPriceElement = document.getElementById('total-price');
+
+        // Función para cambiar la cantidad y actualizar el precio
+        function updatePrice() {
+            const quantity = parseInt(quantityInput.value);
+            const total = (basePrice * quantity).toFixed(2);
+            totalPriceElement.textContent = total;
+        }
+
+        // Función para los botones de + y -
+        function changeQuantity(amount) {
+            let currentQuantity = parseInt(quantityInput.value);
+            currentQuantity += amount;
+            if (currentQuantity < 1) {
+                currentQuantity = 1;
+            }
+            quantityInput.value = currentQuantity;
+            updatePrice();
+        }
+
+        // Escuchar cambios en el input de cantidad para actualizar el precio
+        quantityInput.addEventListener('input', () => {
+            let quantity = parseInt(quantityInput.value);
+            if (isNaN(quantity) || quantity < 1) {
+                quantityInput.value = 1;
+            }
+            updatePrice();
+        });
+
+        // Función para guardar el pedido y redirigir
+        function addToCart() {
+            const quantity = parseInt(quantityInput.value);
+            const total = (basePrice * quantity).toFixed(2);
+            
+            // Guardar los datos del pedido en el almacenamiento local del navegador
+            const orderData = {
+                productName: "Batería de iones de litio",
+                price: basePrice,
+                quantity: quantity,
+                total: total
+            };
+            localStorage.setItem('currentOrder', JSON.stringify(orderData));
+
+            // Redirigir a la página de compra
+            window.location.href = 'compras.html';
+        }
+    </script>
+
+</body>
+</html>

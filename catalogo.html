@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAD components store</title>
+    <!-- Importa la fuente "Playfair Display" de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        /* Estilos para el carrusel de imágenes */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 2em auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .carousel-slide {
+            display: none;
+            width: 100%;
+            height: 400px;
+        }
+        .carousel-slide.active {
+            display: block;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: background-color 0.6s ease;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .prev {
+            left: 0;
+            border-radius: 0 3px 3px 0;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        header {
+            background-color: #6f1105;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2em 0;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2em;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #0b0b0b;
+            margin-bottom: 1em;
+            padding-bottom: 0.5em;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            color: #15171a;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .view-all-link {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .view-all-link:hover {
+            color: #0a0b0b;
+            text-decoration: underline;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 767px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .product-card {
+            background-color: #f9f9f9;
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1em;
+        }
+
+        .product-title {
+            font-size: 1em;
+            margin: 0.5em 0;
+            color: #5e6062;
+        }
+
+        .product-price {
+            font-size: 0.9em;
+            color: #352ca7;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 0.7em 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 0.5em;
+            font-size: 0.8em;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+        
+        .section-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #007bff;
+            color: white;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>MAD components store</h1>
+    </header>
+
+    <!-- Contenedor del Carrusel -->
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/687/937/non_2x/electronic-circuit-board-for-technology-and-finance-concept-and-education-vector.jpg" alt="Electrónica">
+        </div>
+        <div class="carousel-slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvp73PjVyyJonYP7gg42Xu-ne3FcH16TFTlzM_jzdP342a044Ar22AWzigy67jOeXK4k&usqp=CAU" alt="Componentes">
+        </div>
+        <div class="carousel-slide">
+            <img src="https://cdn-shop.adafruit.com/heroes/feathernest.jpg" alt="Sensores">
+        </div>
+        <div class="carousel-slide">
+            <img src="https://cdn-learn.adafruit.com/features/images/000/000/032/original/CircuitPython_Hero.jpg?1613598425" alt="Proyectos">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="section-header">
+                <h2>Baterías</h2>
+                <a href="seccion1.html" class="view-all-link">Ver todo &rarr;</a>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="b1.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/3898-05.jpg" alt="Batería de polímero de iones de litio">
+                    </a>
+                    <h3 class="product-title">Batería de polímero de iones de litio</h3>
+                    <p class="product-price">$6.95</p>
+                    <a href="b1.html" class="btn">Comprar</a>
+                </div>
+                <div class="product-card">
+                    <a href="b2.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/1781-04.jpg" alt="Batería cilíndrica de iones de litio">
+                    </a>
+                    <h3 class="product-title">Batería cilíndrica de iones de litio</h3>
+                    <p class="product-price">$9.95</p>
+                    <a href="b2.html" class="btn">Comprar</a>
+                </div>
+
+                <div class="product-card">
+                    <a href="b3.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/4237-04.jpg" alt="Batería cilíndrica de iones de litio">
+                    </a>
+                    <h3 class="product-title">Batería de polímero de iones de litio con cable corto </h3>
+                    <p class="product-price">$5.95</p>
+                    <a href="b3.html" class="btn">Comprar</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Microcontroladores</h2>
+                <a href="seccion2.html" class="view-all-link">Ver todo &rarr;</a>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="m1.html">
+                        <img src="https://m.media-amazon.com/images/I/61AvdQOxFzL._AC_SX300_SY300_QL70_ML2_.jpg" alt="Arduino Uno">
+                    </a>
+                    <h3 class="product-title">Arduino Uno</h3>
+                    <p class="product-price">$80.00</p>
+                    <a href="m1.html" class="btn">Comprar</a>
+                </div>
+                <div class="product-card">
+                    <a href="m2.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/2077-01.jpg" alt="Kit de placa base Adafruit Proto Shield para Arduino, sin ensamblar, apilable, versión R3">
+                    </a>
+                    <h3 class="product-title">Kit de placa base Adafruit Proto Shield para Arduino, sin ensamblar, apilable, versión R3</h3>
+                    <p class="product-price">$9.5</p>
+                    <a href="m2.html" class="btn">Comprar</a>
+                </div>
+
+                <div class="product-card">
+                    <a href="m3.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/1141-05.jpg" alt="Shield de registro de datos ensamblado Adafruit para Arduino">
+                    </a>
+                    <h3 class="product-title">Shield de registro de datos ensamblado Adafruit para Arduino</h3>
+                    <p class="product-price">$13.95</p>
+                    <a href="m3.html" class="btn">Comprar</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Sensores</h2>
+                <a href="seccion3.html" class="view-all-link">Ver todo &rarr;</a>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="s1.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/5665-00.jpg" alt="DHT20 - AHT20 Pin Module - I2C sensor de temperatura y humedad">
+                    </a>
+                    <h3 class="product-title">DHT20 - AHT20 Pin Module - I2C sensor de temperatura y humedad</h3>
+                    <p class="product-price">$15.50</p>
+                    <a href="s1.html" class="btn">Comprar</a>
+                </div>
+                <div class="product-card">
+                    <a href="s2.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/166-02.jpg" alt="Resistencia circular sensible a la fuerza (FSR) - Fuerza de 0,3 a 10 Newton - Alpha MF01A-N-221-A01">
+                    </a>
+                    <h3 class="product-title">Resistencia circular sensible a la fuerza (FSR) - Fuerza de 0,3 a 10 Newton - Alpha MF01A-N-221-A01</h3>
+                    <p class="product-price">$4.25</p>
+                    <a href="s2.html" class="btn">Comprar</a>
+                </div>
+                <div class="product-card">
+                    <a href="s3.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/4007-00.jpg" alt="Sensor de distancia ultrasónico (3 V o 5 V), compatible con HC-SR04, RCWL-1601">
+                    </a>
+                    <h3 class="product-title">Sensor de distancia ultrasónico (3 V o 5 V), compatible con HC-SR04, RCWL-1601</h3>
+                    <p class="product-price">$3.95</p>
+                    <a href="s3.html" class="btn">Comprar</a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>LCD y Pantallas</h2>
+                <a href="seccion4.html" class="view-all-link">Ver todo &rarr;</a>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="LCD1.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/4367-09.jpg" alt="Circuit Playground TFT Gizmo - Pantalla atornillable + amplificador de audio - JST PH 2 mm">
+                    </a>
+                    <h3 class="product-title">Circuit Playground TFT Gizmo - Pantalla atornillable + amplificador de audio - JST PH 2 mm</h3>
+                    <p class="product-price">$19.95</p>
+                    <a href="LCD1.html" class="btn">Comprar</a>
+                </div>
+                <div class="product-card">
+                    <a href="LCD2.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/938-13.jpg" alt="Pantalla gráfica OLED monocromática de 1,3 y 128 x 64 - STEMMA QT / Qwiic">
+                    </a>
+                    <h3 class="product-title">Pantalla gráfica OLED monocromática de 1,3" y 128 x 64 - STEMMA QT / Qwiic</h3>
+                    <p class="product-price">$19.95</p>
+                    <a href="LCD2.html" class="btn">Comprar</a>
+
+                </div>
+                <div class="product-card">
+                    <a href="LCD3.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/4650-05.jpg" alt="Adafruit FeatherWing OLED - Complemento OLED de 128x64 para Feather - STEMMA QT / Qwiic">
+                    </a>
+                    <h3 class="product-title">Adafruit FeatherWing OLED - Complemento OLED de 128x64 para Feather - STEMMA QT / Qwiic</h3>
+                    <p class="product-price">$14.95</p>
+                    <a href="LCD3.html" class="btn">Comprar</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Placas de Conexión</h2>
+                <a href="seccion5.html" class="view-all-link">Ver todo &rarr;</a>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="PC1.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/815-08.jpg" alt="Controlador PWM/Servo Adafruit de 16 canales y 12 bits - Interfaz I2C - PCA9685">
+                    </a>
+                    <h3 class="product-title">Controlador PWM/Servo Adafruit de 16 canales y 12 bits - Interfaz I2C - PCA9685</h3>
+                    <p class="product-price">$14.95</p>
+                    <a href="PC1.html" class="btn">Comprar</a>
+                </div>
+
+
+                <div class="product-card">
+                    <a href="PC2.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/254-06.jpg" alt="Placa de conexión para tarjeta microSD+">
+                    </a>
+                    <h3 class="product-title">Placa de conexión para tarjeta microSD+</h3>
+                    <p class="product-price">$7.50</p>
+                    <a href="PC2.html" class="btn">Comprar</a>
+                </div>
+
+                <div class="product-card">
+                    <a href="PC3.html">
+                        <img src="https://cdn-shop.adafruit.com/970x728/395-03.jpg" alt="Convertidor de nivel lógico bidireccional de 8 canales - TXB0108">
+                    </a>
+                    <h3 class="product-title">Convertidor de nivel lógico bidireccional de 8 canales - TXB0108</h3>
+                    <p class="product-price">$7.95</p>
+                    <a href="PC3.html" class="btn">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 MAD Components Store. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("carousel-slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+</html>

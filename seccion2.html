@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baterías - MAD components store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2em 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1em;
+        }
+        /* Estilos para la nueva sección de introducción */
+        .intro-section {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .intro-section {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+        
+        .intro-section img {
+            max-width: 350px;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+        
+        @media (min-width: 768px) {
+            .intro-section img {
+                margin-bottom: 0;
+            }
+        }
+        
+        .intro-section h3 {
+            font-family: 'Playfair Display', serif;
+            color: #15171a;
+            margin-bottom: 0.5em;
+        }
+        
+        .product-title {
+            font-size: 1.2em;
+            margin: 0.5em 0;
+            color: #101010;
+        }
+
+        .product-price {
+            font-size: 1.1em;
+            color: #201f1d;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 0.7em 1.5em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #007bff;
+            color: white;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Arduino y mas</h1>
+    </header>
+<div class="intro-section">
+        <img src="https://www.fundacionaquae.org/wp-content/uploads/2017/02/arduino.jpg" alt="Arduino y complementos en tus proyectos"> 
+        <div>
+            <h2>Arduino y complementos en tus proyectos</h2>
+            <p>Los complementos o accesorios de Arduino son elementos electrónicos y de hardware que se conectan a una placa Arduino para expandir sus funcionalidades, permitiendo crear proyectos más complejos al interactuar con el mundo físico a través de sensores, actuadores, o la adición de capacidades como pantallas y comunicación inalámbrica. Estos pueden incluir desde componentes básicos como cables y protoboards, hasta módulos especializados y shields para funciones específicas. </p>
+       
+        </div>
+             </div>
+             
+    <div class="container">
+        <a href="catalogo.html" class="back-link">&larr; Volver a la página principal</a>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="m1.html">
+                    <img src="https://m.media-amazon.com/images/I/61AvdQOxFzL._AC_SX300_SY300_QL70_ML2_.jpg" alt="Arduino Uno">
+                </a>
+                <h3 class="product-title">Arduino uno</h3>
+                <p class="product-price">$80</p>
+                <a href="m1.html" class="btn">Comprar</a>
+            </div>
+            
+            <div class="product-card">
+                <a href="m2.html">
+                    <img src="https://cdn-shop.adafruit.com/970x728/2077-03.jpg" alt="Kit de placa base Adafruit Proto Shield para Arduino, sin ensamblar, apilable, versión R3">
+                </a>
+                <h3 class="product-title">Kit de placa base Adafruit Proto Shield para Arduino, sin ensamblar, apilable, versión R3</h3>
+                <p class="product-price">$9.95</p>
+                <a href="m2.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <a href="m3.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/1141-05.jpg" alt="Shield de registro de datos ensamblado Adafruit para Arduino - Detalles">
+            </a>
+
+                <h3 class="product-title">Shield de registro de datos ensamblado Adafruit para Arduino - Detalles</h3>
+                <p class="product-price">$13.95</p>
+                <a href="m3.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <a href="m4.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/789-02.jpg" alt="Shield controlador NFC/RFID Adafruit PN532 para Arduino + Extras">
+                <h3 class="product-title">Shield controlador NFC/RFID Adafruit PN532 para Arduino + Extras</h3>
+            </a>
+                <p class="product-price">$39.95</p>
+                <a href="m4.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <a href="m5.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/196-00.jpg" alt="Kit Proto-Screwshield (Wingshield) R3 para Arduino">
+                <h3 class="product-title">Kit Proto-Screwshield (Wingshield) R3 para Arduino</h3>
+                   </a>
+
+                <p class="product-price">$14.95</p>
+                <a href="m5.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <a href="m6.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/2378-00.jpg" alt="Arduino Pro Mini 328 - 5 V/16 MHz">
+                <h3 class="product-title">Arduino Pro Mini 328 - 5 V/16 MHz</h3>
+                   </a>
+                <p class="product-price">$13.50</p>
+                <a href="m6.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+               <a href="m7.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/2746-11.jpg" alt="Adafruit Bluefruit LE Shield - Bluetooth LE para Arduino">
+                <h3 class="product-title">Adafruit Bluefruit LE Shield - Bluetooth LE para Arduino</h3>
+                    </a>
+                <p class="product-price">$19.95</p>
+                <a href="m7.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <a href="m8.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/2995-01.jpg" alt="Feather M0 Bluefruit LE">
+                <h3 class="product-title">Feather M0 Bluefruit LE</h3>
+                    </a>
+                <p class="product-price">$29.95</p>
+                <a href="m8.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                  <a href="m9.html">
+                <img src="https://via.placeholder.com/300/e0e0e0" alt="Cargador de baterías universal">
+                <h3 class="product-title">Cargador de baterías universal</h3>
+                   </a>
+                <p class="product-price">$19.99</p>
+                <a href="m9.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <a href="m10.html">
+                <img src="https://via.placeholder.com/300/e0e0e0" alt="Power Bank Portátil">
+                <h3 class="product-title">Power Bank Portátil</h3>
+                </a>
+                <p class="product-price">$35.00</p>
+                <a href="m10.html" class="btn">Comprar</a>
+            </div>
+                <div class="product-card">
+                <a href="m11.html">
+                <img src="https://via.placeholder.com/300/e0e0e0" alt="Power Bank Portátil">
+                <h3 class="product-title">Power Bank Portátil</h3>
+                </a>
+                <p class="product-price">$35.00</p>
+                <a href="m11.html" class="btn">Comprar</a>
+            </div>
+                    <div class="product-card">
+                <a href="m12.html">
+                <img src="https://via.placeholder.com/300/e0e0e0" alt="Power Bank Portátil">
+                <h3 class="product-title">Power Bank Portátil</h3>
+                </a>
+                <p class="product-price">$35.00</p>
+                <a href="m12.html" class="btn">Comprar</a>
+            </div>
+
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 MAD Components Store. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

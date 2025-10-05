@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensores </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2em 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1em;
+        }
+
+        .product-title {
+            font-size: 1.2em;
+            margin: 0.5em 0;
+            color: #007bff;
+        }
+
+        .product-price {
+            font-size: 1.1em;
+            color: #e67e22;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 0.7em 1.5em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #007bff;
+            color: white;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sensores</h1>
+    </header>
+
+    <div class="container">
+        <a href="catalogo.html" class="back-link">&larr; Volver a la página principal</a>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="s1.html">
+                    <img src="https://cdn-shop.adafruit.com/970x728/3898-05.jpg" alt="Arduino Uno">
+                </a>
+                <h3 class="product-title">sensor </h3>
+                <p class="product-price">15.50</p>
+                <a href="b1.html" class="btn">Comprar</a>
+            </div>
+            
+            <div class="product-card">
+                <a href="s2.html">
+                    <img src="https://cdn-shop.adafruit.com/970x728/1781-04.jpg" alt="Batería cilíndrica de iones de litio">
+                </a>
+                <h3 class="product-title">Batería cilíndrica de iones de litio</h3>
+                <p class="product-price">$9.95</p>
+                <a href="b2.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <a href="b3.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/4237-04.jpg" alt="Batería de polímero de iones de litio con cable corto ">
+            </a>
+
+                <h3 class="product-title">Batería de polímero de iones de litio con cable corto </h3>
+                <p class="product-price">$5.50</p>
+                <a href="b3.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300/e0e0e0" alt="Paquete de baterías recargables">
+                <h3 class="product-title">Paquete de baterías recargables</h3>
+                <p class="product-price">$15.00</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300/e0e0e0" alt="Batería de alta capacidad">
+                <h3 class="product-title">Batería de alta capacidad</h3>
+                <p class="product-price">$12.99</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300/e0e0e0" alt="Pila de botón de litio">
+                <h3 class="product-title">Pila de botón de litio</h3>
+                <p class="product-price">$2.50</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300/e0e0e0" alt="Batería para drones">
+                <h3 class="product-title">Batería para drones</h3>
+                <p class="product-price">$22.00</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300/e0e0e0" alt="Batería para wearables">
+                <h3 class="product-title">Batería para wearables</h3>
+                <p class="product-price">$8.75</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300/e0e0e0" alt="Cargador de baterías universal">
+                <h3 class="product-title">Cargador de baterías universal</h3>
+                <p class="product-price">$19.99</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300/e0e0e0" alt="Power Bank Portátil">
+                <h3 class="product-title">Power Bank Portátil</h3>
+                <p class="product-price">$35.00</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 MAD Components Store. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

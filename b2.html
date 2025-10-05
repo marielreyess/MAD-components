@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batería de iones de litio - Detalles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2em 0;
+        }
+
+        .product-detail-card {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-header {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 1.5em;
+        }
+        
+        .product-main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            margin-bottom: 2em;
+        }
+
+        .description-section {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .image-specs-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .product-image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .additional-specs {
+            margin-top: 2em;
+            padding-top: 1.5em;
+            border-top: 1px solid #eee;
+        }
+
+        .additional-specs h3 {
+            color: #007bff;
+        }
+
+        .additional-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .additional-specs ul li {
+            background-color: #f9f9f9;
+            margin-bottom: 0.5em;
+            padding: 0.8em;
+            border-radius: 4px;
+        }
+        .additional-specs ul li strong {
+            color: #e67e22;
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #e67e22;
+            font-weight: bold;
+            margin-bottom: 1.5em;
+            text-align: right;
+        }
+        
+        .purchase-options {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            margin-top: 1em;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .quantity-control button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .quantity-control input {
+            width: 3em;
+            text-align: center;
+            border: none;
+            font-size: 1em;
+            -moz-appearance: textfield; /* Para Firefox */
+        }
+        .quantity-control input::-webkit-outer-spin-button,
+        .quantity-control input::-webkit-inner-spin-button {
+            -webkit-appearance: none; /* Para Chrome, Safari, Edge */
+            margin: 0;
+        }
+        .add-to-cart-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #218838;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .total-price {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #e67e22;
+            text-align: right;
+            margin-top: 1em;
+        }
+        .total-price span {
+            font-size: 0.8em;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .product-main-content {
+                flex-direction: column;
+            }
+            .description-section, .image-specs-section {
+                flex: none;
+                width: 100%;
+                min-width: unset;
+            }
+            .product-price {
+                text-align: left;
+            }
+            .purchase-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="catalogo.html" class="back-link">&larr; Volver al Catálogo</a>
+
+        <div class="product-detail-card">
+            <h1 class="product-header">Batería cilíndrica de iones de litio - 3,7 V 2200 mAh</h1>
+            
+            <div class="product-main-content">
+                
+                <div class="description-section">
+                    <p>Descripción
+                        ¿Necesita una batería potente para su proyecto? Esta batería de iones de litio contiene 2200 mAh y un circuito de protección contra sobretensión, subtensión y sobrecorriente. Además, es delgada y fácil de instalar en diversos maletines.
+                        
+                        Esta celda puede proporcionar una corriente pico de 2 C (4400 mA). Tenga en cuenta que estas baterías no están diseñadas para soportar cargas tan altas; le sugerimos mantener el consumo de corriente constante por debajo de aproximadamente 0,5 C (1 A).
+                        
+                        Las baterías vienen preinstaladas con un conector JST-PH de 2 pines, como se muestra, e incluyen el circuito de protección necesario. Gracias a su conector JST o compatible de alta calidad, el cable no se engancha ni se atasca en el conector JST correspondiente, sino que se conecta y desconecta con facilidad. Los cables tienen una clasificación de 2 A, así que tenlo en cuenta si los usas.
+                        
+                        El circuito de protección incluido evita que el voltaje de la batería suba demasiado (sobrecarga) o baje demasiado (sobreuso), lo que significa que la batería se desconectará cuando se descargue por completo a 2,5 V. Sin embargo, incluso con esta protección,  es muy importante que solo uses un cargador de LiIon/LiPoly de voltaje/corriente constante para recargarlas, a una velocidad de 0,5 C (1 A) o menos.
+                        
+                        Como la mayoría de las baterías de iones de litio, las baterías que vendemos no tienen termistores integrados. Por eso, sugerimos cargarlas a 1/2 C o incluso menos, con un máximo de 1 A en este caso. Por supuesto, puede cargar a una velocidad menor; solo tardará un poco más en llenarse.
+                    </p>
+                    <p id="product-base-price" style="display: none;">9.95</p>
+                    
+                    <div class="purchase-options">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity(-1)">-</button>
+                            <input type="number" id="quantity" value="1" min="1">
+                            <button onclick="changeQuantity(1)">+</button>
+                        </div>
+
+                        <button class="add-to-cart-btn" onclick="addToCart()">Añadir al Carrito</button>
+
+
+                    </div>
+
+                    <p class="total-price">
+                        Total: $<span id="total-price">$9.95</span>
+                    </p>
+                </div>
+
+                <div class="image-specs-section">
+                    <div class="product-image-gallery">
+                        <img src="https://cdn-shop.adafruit.com/970x728/1781-04.jpg" alt="Batería cilindrica de iones de litio - Vista principal">
+                        <img src="https://cdn-shop.adafruit.com/970x728/1781-05.jpg" alt="Batería cilindrica iones de litio - Vista de frente">
+                        <img src="https://cdn-shop.adafruit.com/970x728/1781-03.jpg" alt="Batería cilindrica iones de litio - Vista de lado">
+                    </div>
+
+                    <div class="additional-specs">
+                        <h3>Especificaciones Técnicas</h3>
+                        <ul>
+                            <li><strong>Capacidad</strong>: 2200 mAh ±2 %</li>
+                            <li><strong>Voltaje de Salida</strong>: 2,75 V</li>
+                            <li><strong>Conector</strong>: JST-PH de 2 pines, 25 mm</li>
+                            <li><strong>Incluye</strong>: Circuito de protección</li>
+                            <li><strong>Dimensiones</strong>: 69 mm x diámetro 18 mm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="full-description">
+                <h3>Información de Seguridad y Uso</h3>
+                <p>El circuito de protección incluido evita que el voltaje de la batería suba demasiado (sobrecarga) o baje demasiado (uso excesivo), lo que significa que la batería se apagará cuando esté completamente muerta a 3.0 V. También protegerá contra cortocircuitos de salida. Sin embargo, incluso con esta protección, es muy importante que solo uses un cargador de LiIon/LiPoly de voltaje constante/corriente constante para recargarlas y a una tasa de 400 mA o menos. Sugerimos nuestro cargador Micro Lipo, que tiene una tasa predeterminada de 100 mA. También puedes configurar el Micro Lipo a una tasa de 400 mA para una carga más rápida. Todas nuestras plumas se cargan a una tarifa segura. Como la mayoría de las baterías lipo, las baterías que vendemos no tienen termistores incorporados. Es por eso que sugerimos cargar a 1 C o incluso menos: 100 a 400 mA es una buena tasa y está disponible desde cualquier puerto USB si usa un cargador alimentado por USB.</p>
+                
+                <p>Notas de seguridad adicionales: ¡No use un cargador de NiMH/NiCad/plomo-ácido! Además, no maltrate estas baterías, no las cortocircuite, doble, aplaste ni perfore. Nunca las cargue ni las use sin supervisión. Siempre inspeccione las baterías y los circuitos circundantes constantemente para detectar cualquier daño, cableado suelto o la posibilidad de cortocircuitos. La polaridad coincide con todos los cargadores y placas Adafruit LiPoly/LiIon; otras marcas pueden tener polaridad inversa y pueden destruir su batería. Al igual que con todas las baterías de polímero de iones de litio y con cualquier fuente de energía, deben ser utilizadas por expertos que se sientan cómodos trabajando con fuentes de alimentación.</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        const basePrice = 9.95;
+        const quantityInput = document.getElementById('quantity');
+        const totalPriceElement = document.getElementById('total-price');
+
+        // Función para cambiar la cantidad y actualizar el precio
+        function updatePrice() {
+            const quantity = parseInt(quantityInput.value);
+            const total = (basePrice * quantity).toFixed(2);
+            totalPriceElement.textContent = total;
+        }
+
+        // Función para los botones de + y -
+        function changeQuantity(amount) {
+            let currentQuantity = parseInt(quantityInput.value);
+            currentQuantity += amount;
+            if (currentQuantity < 1) {
+                currentQuantity = 1;
+            }
+            quantityInput.value = currentQuantity;
+            updatePrice();
+        }
+
+        // Escuchar cambios en el input de cantidad para actualizar el precio
+        quantityInput.addEventListener('input', () => {
+            let quantity = parseInt(quantityInput.value);
+            if (isNaN(quantity) || quantity < 1) {
+                quantityInput.value = 1;
+            }
+            updatePrice();
+        });
+
+        // Función para guardar el pedido y redirigir
+        function addToCart() {
+            const quantity = parseInt(quantityInput.value);
+            const total = (basePrice * quantity).toFixed(2);
+            
+            // Guardar los datos del pedido en el almacenamiento local del navegador
+            const orderData = {
+                productName: "Batería de iones de litio",
+                price: basePrice,
+                quantity: quantity,
+                total: total
+            };
+            localStorage.setItem('currentOrder', JSON.stringify(orderData));
+
+            // Redirigir a la página de compra
+            window.location.href = 'compras.html';
+        }
+    </script>
+
+</body>
+</html>

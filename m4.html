@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shield controlador NFC/RFID Adafruit PN532 para Arduino + Extras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2em 0;
+        }
+
+        .product-detail-card {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-header {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 1.5em;
+        }
+        
+        .product-main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            margin-bottom: 2em;
+        }
+
+        .description-section {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .image-specs-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .product-image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .additional-specs {
+            margin-top: 2em;
+            padding-top: 1.5em;
+            border-top: 1px solid #eee;
+        }
+
+        .additional-specs h3 {
+            color: #007bff;
+        }
+
+        .additional-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .additional-specs ul li {
+            background-color: #f9f9f9;
+            margin-bottom: 0.5em;
+            padding: 0.8em;
+            border-radius: 4px;
+        }
+        .additional-specs ul li strong {
+            color: #e67e22;
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #e67e22;
+            font-weight: bold;
+            margin-bottom: 1.5em;
+            text-align: right;
+        }
+        
+        .purchase-options {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            margin-top: 1em;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .quantity-control button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .quantity-control input {
+            width: 3em;
+            text-align: center;
+            border: none;
+            font-size: 1em;
+            -moz-appearance: textfield; /* Para Firefox */
+        }
+        .quantity-control input::-webkit-outer-spin-button,
+        .quantity-control input::-webkit-inner-spin-button {
+            -webkit-appearance: none; /* Para Chrome, Safari, Edge */
+            margin: 0;
+        }
+        .add-to-cart-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #218838;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .total-price {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #e67e22;
+            text-align: right;
+            margin-top: 1em;
+        }
+        .total-price span {
+            font-size: 0.8em;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .product-main-content {
+                flex-direction: column;
+            }
+            .description-section, .image-specs-section {
+                flex: none;
+                width: 100%;
+                min-width: unset;
+            }
+            .product-price {
+                text-align: left;
+            }
+            .purchase-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="catalogo.html" class="back-link">&larr; Volver al Catálogo</a>
+
+        <div class="product-detail-card">
+            <h1 class="product-header">Shield controlador NFC/RFID Adafruit PN532 para Arduino + Extras</h1>
+            
+            <div class="product-main-content">
+                
+                <div class="description-section">
+                    <p>Descripción
+                        Hemos convertido nuestra popular placa de desarrollo Adafruit PN532 en un shield: la herramienta perfecta para cualquier aplicación RFID o NFC de 13,56 MHz. El shield NFC de Adafruit utiliza el chipset PN532 (el chip NFC más popular del mercado) y es el que viene integrado en prácticamente todos los teléfonos o dispositivos compatibles con NFC. Este chipset es muy potente y puede prácticamente todo, como leer y escribir en etiquetas y tarjetas, comunicarse con teléfonos (por ejemplo, para procesar pagos) y actuar como una etiqueta NFC. Si bien el controlador tiene muchas funciones, nuestra biblioteca Arduino actualmente solo admite la lectura y escritura de etiquetas, y no admite la comunicación entre teléfonos y shield, la emulación de etiquetas (que requiere un elemento seguro externo, solo disponible en NXP) ni otras funciones más avanzadas.
+
+NFC (Near Field Communications) permite la comunicación entre dos dispositivos muy cercanos. Es similar a un Bluetooth de muy corto alcance que no requiere autenticación. Es una extensión de RFID, así que todo lo que se puede hacer con RFID se puede hacer con NFC.
+
+Dado que puede leer y escribir etiquetas, siempre puede usarlo para proyectos con etiquetas RFID. Ofrecemos varias etiquetas que funcionan a la perfección con este chip. También es compatible con cualquier otra etiqueta NFC/RFID de tipo 1 a 4.
+                    
+</p>
+                    <p id="product-base-price" style="display: none;">39.95</p>
+                    
+                    <div class="purchase-options">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity(-1)">-</button>
+                            <input type="number" id="quantity" value="1" min="1">
+                            <button onclick="changeQuantity(1)">+</button>
+                        </div>
+
+                        <button class="add-to-cart-btn" onclick="addToCart()">Añadir al Carrito</button>
+
+
+                    </div>
+
+                    <p class="total-price">
+                        Total: $<span id="total-price">39.95</span>
+                    </p>
+                </div>
+
+                <div class="image-specs-section">
+                    <div class="product-image-gallery">
+                        <img src="https://cdn-shop.adafruit.com/970x728/789-02.jpg" alt="Arduino">
+                        <img src="https://cdn-shop.adafruit.com/970x728/789-06.jpg">
+                        <img src="https://cdn-shop.adafruit.com/970x728/789-09.jpg">
+                    </div>
+
+                    <div class="additional-specs">
+                        <h3>Especificaciones Técnicas</h3>
+                        <ul>
+                            <li><strong>Esta placa/chip utiliza: </strong>la dirección I2C de 7 bits 0x48</li>
+                           
+                            <li><strong>Dimensiones: </strong> 2,1" (53,3 mm) x 4,7" (117,7 mm) y 0,425" (1,1 mm) de espesor.</li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="full-description">
+                 <h3>Incluye</h3>
+                 <p>La shield Adafruit NFC/RFID PN532, que incluye una antena de línea de banda sintonizada de 13,56 MHz y un conector de 36 pines de 0,1" para conectar la shield a un Arduino. Si quieres apilar otra shield encima o debajo, consulta nuestros conectores de apilamiento que permiten el apilamiento de paso. ¡ También incluimos una tarjeta RFID/NFC de 13,56 MHz de 1K! ( Puedes obtener más etiquetas aquí ).</p>
+
+                <h3>Información de Seguridad y Uso</h3>
+                <p>El shield Adafruit fue diseñado por ingenieros de RF con el mejor equipo de prueba para crear un diseño y una antena con un alcance de 10 cm (4 pulgadas), el máximo alcance posible con la tecnología de 13,56 MHz. Puede fijarlo fácilmente detrás de una placa de plástico con separadores y leer tarjetas a través de una barrera (no metálica).</p>
+                   
+                
+                <h3>Sobre nosotros</h3> 
+
+                   <p> La innovación está en manos de todos los que quieren mejorar su vida rompiendo barreras tecnológicas. A través de la creación, producción y soporte de hardware y software electrónicos, Arduino proporciona un acceso sencillo a tecnologías de vanguardia que interactúan con el mundo real. Únete a una comunidad mundial alrededor de esta plataforma de código abierto y da vida a una innovación tecnológica simple o innovadora a través de herramientas simples pero potentes
+                </p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        const basePrice = 39.95;
+        const quantityInput = document.getElementById('quantity');
+        const totalPriceElement = document.getElementById('total-price');
+
+        // Función para cambiar la cantidad y actualizar el precio
+        function updatePrice() {
+            const quantity = parseInt(quantityInput.value);
+            const total = (basePrice * quantity).toFixed(2);
+            totalPriceElement.textContent = total;
+        }
+
+        // Función para los botones de + y -
+        function changeQuantity(amount) {
+            let currentQuantity = parseInt(quantityInput.value);
+            currentQuantity += amount;
+            if (currentQuantity < 1) {
+                currentQuantity = 1;
+            }
+            quantityInput.value = currentQuantity;
+            updatePrice();
+        }
+
+        // Escuchar cambios en el input de cantidad para actualizar el precio
+        quantityInput.addEventListener('input', () => {
+            let quantity = parseInt(quantityInput.value);
+            if (isNaN(quantity) || quantity < 1) {
+                quantityInput.value = 1;
+            }
+            updatePrice();
+        });
+
+        // Función para guardar el pedido y redirigir
+        function addToCart() {
+            const quantity = parseInt(quantityInput.value);
+            const total = (basePrice * quantity).toFixed(2);
+            
+            // Guardar los datos del pedido en el almacenamiento local del navegador
+            const orderData = {
+                productName: "Shield de registro de datos ensamblado Adafruit para Arduino",
+                price: basePrice,
+                quantity: quantity,
+                total: total
+            };
+            localStorage.setItem('currentOrder', JSON.stringify(orderData));
+
+            // Redirigir a la página de compra
+            window.location.href = 'compras.html';
+        }
+    </script>
+
+</body>
+</html>

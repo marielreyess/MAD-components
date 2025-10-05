@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Controlador PWM/Servo Adafruit de 16 canales y 12 bits - Interfaz I2C - PCA9685  </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2em 0;
+        }
+
+        .product-detail-card {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-header {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 1.5em;
+        }
+        
+        .product-main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            margin-bottom: 2em;
+        }
+
+        .description-section {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .image-specs-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .product-image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .additional-specs {
+            margin-top: 2em;
+            padding-top: 1.5em;
+            border-top: 1px solid #eee;
+        }
+
+        .additional-specs h3 {
+            color: #007bff;
+        }
+
+        .additional-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .additional-specs ul li {
+            background-color: #f9f9f9;
+            margin-bottom: 0.5em;
+            padding: 0.8em;
+            border-radius: 4px;
+        }
+        .additional-specs ul li strong {
+            color: #e67e22;
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #e67e22;
+            font-weight: bold;
+            margin-bottom: 1.5em;
+            text-align: right;
+        }
+        
+        .purchase-options {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            margin-top: 1em;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .quantity-control button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .quantity-control input {
+            width: 3em;
+            text-align: center;
+            border: none;
+            font-size: 1em;
+            -moz-appearance: textfield; /* Para Firefox */
+        }
+        .quantity-control input::-webkit-outer-spin-button,
+        .quantity-control input::-webkit-inner-spin-button {
+            -webkit-appearance: none; /* Para Chrome, Safari, Edge */
+            margin: 0;
+        }
+        .add-to-cart-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #218838;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .total-price {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #e67e22;
+            text-align: right;
+            margin-top: 1em;
+        }
+        .total-price span {
+            font-size: 0.8em;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .product-main-content {
+                flex-direction: column;
+            }
+            .description-section, .image-specs-section {
+                flex: none;
+                width: 100%;
+                min-width: unset;
+            }
+            .product-price {
+                text-align: left;
+            }
+            .purchase-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="catalogo.html" class="back-link">&larr; Volver al Catálogo</a>
+
+        <div class="product-detail-card">
+            <h1 class="product-header">Controlador PWM/Servo Adafruit de 16 canales y 12 bits - Interfaz I2C - PCA9685</h1>
+            
+            <div class="product-main-content">
+                
+                <div class="description-section">
+                    <p>Es un controlador PWM controlado por I2C con reloj integrado. Esto significa que, a diferencia de la familia TLC5940, no necesita enviarle señales continuamente, lo que sobrecarga su microcontrolador; ¡funciona con total libertad!
+Es compatible con 5 V, lo que significa que puede controlarlo desde un microcontrolador de 3,3 V, con pull-ups lógicos de 3,3 V, y aún así reducir de forma segura hasta salidas de 5,5 V (esto es bueno para cuando desea controlar LED blancos o azules de ánodo común con voltajes directos de 3,4+)
+6 pines de selección de dirección para que pueda conectar hasta 62 de estos en un solo bus i2c, un total de 992 salidas: son muchos servos o LED
+Frecuencia ajustable PWM hasta aproximadamente 1,6 KHz
+Resolución de 12 bits para cada salida: para los servos, eso significa una resolución de aproximadamente 4us a una frecuencia de actualización de 60 Hz
+Salida push-pull o de drenaje abierto configurable
+Pin de habilitación de salida para deshabilitar rápidamente todas las salidas
+Envolvimos este hermoso chip en una placa de expansión con un par de extras agradables.
+
+Bloque de terminales para entrada de energía (o puede utilizar las conexiones de 0,1" en el lateral)
+Protección contra polaridad inversa en la entrada del bloque de terminales. El bloque de terminales incluido con su producto puede ser azul o negro.
+LED de energía verde y buena
+Conectores de 3 pines en grupos de 4 para que puedas conectar 16 servos a la vez (los conectores de los servos son ligeramente más anchos que 0,1", por lo que solo puedes apilar 4 uno al lado del otro en un conector de 0,1")
+Diseño "encadenable"
+Un lugar para colocar un condensador grande en la línea V+ (en caso de que lo necesite)
+Resistencias en serie de 220 ohmios en todas las líneas de salida para protegerlas y hacer que el control de los LED sea trivial.
+Puentes de soldadura para los 6 pines de selección de dirección
+</p>
+                 
+                        <p id="product-base-price" style="display: none;">14.95</p>
+                    
+                    <div class="purchase-options">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity(-1)">-</button>
+                            <input type="number" id="quantity" value="1" min="1">
+                            <button onclick="changeQuantity(1)">+</button>
+                        </div>
+
+                        <button class="add-to-cart-btn" onclick="addToCart()">Añadir al Carrito</button>
+
+
+                    </div>
+
+                    <p class="total-price">
+                        Total: $<span id="total-price">14.95</span>
+                    </p>
+                </div>
+
+                <div class="image-specs-section">
+                    <div class="product-image-gallery">
+                        <img src="https://cdn-shop.adafruit.com/970x728/815-05.jpg">
+                        <img src="https://cdn-shop.adafruit.com/970x728/815-06.jpg">
+                        <img src="https://cdn-shop.adafruit.com/970x728/815-00.jpg">
+                         <img src="https://cdn-shop.adafruit.com/970x728/815-08.jpg">
+                    </div>
+
+                    <div class="additional-specs">
+                        <h3>Especificaciones Técnicas</h3>
+                        <ul>
+                            <li><strong>dimensiones </strong> 2,5" x 1" x 0,1" 62,5 mm x 25,4 mm x 3 mm</li>
+
+                            <li><strong>Peso	</strong> 9g</li>
+<li><strong>Esta placa/chip utiliza	</strong>una dirección I2C de 7 bits entre 0x40-0x7F, seleccionable con puentes. </li>
+                             
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="full-description">
+                <h3>Información de Seguridad y Uso</h3>
+                <p>Este producto incluye una placa de expansión completamente probada y ensamblada, así como 4 conectores macho rectos de 3x4 (para servos/LED), un bloque de terminales de 2 pines (para alimentación) y un conector de 6 pines de 0,1" (para conectar a una placa de pruebas). Se requiere una pequeña soldadura para ensamblar y personalizar la placa conectando los conectores deseados, pero es una tarea de 15 minutos que incluso un principiante puede realizar. Si desea usar conectores de 3x4 en ángulo recto, también tenemos un paquete de 4 en la tienda. ¡
+                
+                
+                </p>
+
+               <h3>Sobre nosotros</h3> 
+
+                   <p> La innovación está en manos de todos los que quieren mejorar su vida rompiendo barreras tecnológicas. A través de la creación, producción y soporte de hardware y software electrónicos, Arduino proporciona un acceso sencillo a tecnologías de vanguardia que interactúan con el mundo real. Únete a una comunidad mundial alrededor de esta plataforma de código abierto y da vida a una innovación tecnológica simple o innovadora a través de herramientas simples pero potentes
+                </p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        const basePrice = 14.95;
+        const quantityInput = document.getElementById('quantity');
+        const totalPriceElement = document.getElementById('total-price');
+
+        // Función para cambiar la cantidad y actualizar el precio
+        function updatePrice() {
+            const quantity = parseInt(quantityInput.value);
+            const total = (basePrice * quantity).toFixed(2);
+            totalPriceElement.textContent = total;
+        }
+
+        // Función para los botones de + y -
+        function changeQuantity(amount) {
+            let currentQuantity = parseInt(quantityInput.value);
+            currentQuantity += amount;
+            if (currentQuantity < 1) {
+                currentQuantity = 1;
+            }
+            quantityInput.value = currentQuantity;
+            updatePrice();
+        }
+
+        // Escuchar cambios en el input de cantidad para actualizar el precio
+        quantityInput.addEventListener('input', () => {
+            let quantity = parseInt(quantityInput.value);
+            if (isNaN(quantity) || quantity < 1) {
+                quantityInput.value = 1;
+            }
+            updatePrice();
+        });
+
+        // Función para guardar el pedido y redirigir
+        function addToCart() {
+            const quantity = parseInt(quantityInput.value);
+            const total = (basePrice * quantity).toFixed(2);
+            
+            // Guardar los datos del pedido en el almacenamiento local del navegador
+            const orderData = {
+                productName: "Batería de iones de litio",
+                price: basePrice,
+                quantity: quantity,
+                total: total
+            };
+            localStorage.setItem('currentOrder', JSON.stringify(orderData));
+
+            // Redirigir a la página de compra
+            window.location.href = 'compras.html';
+        }
+    </script>
+
+</body>
+</html>

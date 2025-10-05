@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baterías - MAD components store</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #2e2f30;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2em 0;
+        }
+        
+        /* Estilos para la nueva sección de introducción */
+        .intro-section {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .intro-section {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+        
+        .intro-section img {
+            max-width: 250px;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+        
+        @media (min-width: 768px) {
+            .intro-section img {
+                margin-bottom: 0;
+            }
+        }
+        
+        .intro-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #15171a;
+            margin-bottom: 0.5em;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1em;
+        }
+
+        .product-title {
+            font-size: 1.2em;
+            margin: 0.5em 0;
+            color: #1a1c1e;
+        }
+
+        .product-price {
+            font-size: 1.1em;
+            color: #e67e22;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 0.7em 1.5em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #007bff;
+            color: white;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Baterías</h1>
+    </header>
+
+    <div class="intro-section">
+        <img src="https://cdn-shop.adafruit.com/970x728/1904-06.jpg" alt="Batería de polímero de iones de litio"> 
+        <div>
+            <h2>Baterías en tus proyectos</h2>
+            <p>Las baterías son dispositivos que almacenan energía química y la convierten en energía eléctrica. Son componentes esenciales en la electrónica, ya que proporcionan la alimentación necesaria para que los circuitos y dispositivos funcionen de manera autónoma, sin necesidad de estar conectados a una fuente de energía externa. Se utilizan en una amplia variedad de proyectos, desde dispositivos portátiles y juguetes hasta sistemas complejos de robótica.</p>
+           </div>
+             </div>
+             
+           <div class="container">
+         <a href="index.html" class="back-link">&larr; Volver a la página principal</a>
+
+         <div class="product-grid">
+            <div class="product-card">
+                <a href="b1.html">
+                    <img src="https://cdn-shop.adafruit.com/970x728/3898-05.jpg" alt="Batería de polímero de iones de litio">
+                </a>
+                <h3 class="product-title">Batería de polímero de iones de litio</h3>
+                <p class="product-price">$6.95</p>
+                <a href="b1.html" class="btn">Comprar</a>
+            </div>
+            
+            <div class="product-card">
+                <a href="b2.html">
+                    <img src="https://cdn-shop.adafruit.com/970x728/1781-04.jpg" alt="Batería cilíndrica de iones de litio">
+                </a>
+                <h3 class="product-title">Batería cilíndrica de iones de litio</h3>
+                <p class="product-price">$9.95</p>
+                <a href="b2.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <a href="b3.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/4237-04.jpg" alt="Batería de polímero de iones de litio con cable corto ">
+            </a>
+
+                <h3 class="product-title">Batería de polímero de iones de litio con cable corto </h3>
+                <p class="product-price">$5.50</p>
+                <a href="b3.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                 <a href="b4.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/830-07.jpg" alt="Portapilas para 4 pilas AA con interruptor de encendido y apagado">
+                </a>
+
+                <h3 class="product-title">Portapilas para 4 pilas AA con interruptor de encendido y apagado</h3>
+                <p class="product-price">$2.95</p>
+                <a href="b4.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                 <a href="b5.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/4755-06.jpg" alt="Cargador universal Adafruit USB/CC/solar de iones de litio/polímero - bq24074">
+                  </a>
+                <h3 class="product-title">Cargador universal Adafruit USB/CC/solar de iones de litio/polímero - bq24074</h3>
+                <p class="product-price">$14.95</p>
+                <a href="b5.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+
+             <a href="b6.html">   <img src="https://cdn-shop.adafruit.com/970x728/380-01.jpg" alt="Pila de botón de litio CR1220 de 12 mm de diámetro y 3 V (CR1220)">
+                 </a>
+                <h3 class="product-title">Pila de botón de litio CR1220 de 12 mm de diámetro y 3 V (CR1220)</h3>
+                <p class="product-price">$0.95</p>
+                <a href="b6.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                    <a href="b7.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/5035-00.jpg" alt="Batería de iones de litio - 3,7 V 10050 mAh (10 Ah)">
+                </a>
+                <h3 class="product-title">Batería de iones de litio - 3,7 V 10050 mAh (10 Ah)</h3>
+                <p class="product-price">$29.95</p>
+                <a href="b7.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                 <a href="b8.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/3520-00.jpg" alt="Pilas alcalinas AAA - paquete de 3">
+                  </a>
+                <h3 class="product-title">Pilas alcalinas AAA - paquete de 3</h3>
+                <p class="product-price">$1.50</p>
+                <a href="b8.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+                <a href="b9.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/1944-00.jpg" alt="Cargador PowerBoost 500 - Batería recargable de polímero de litio de 5 V con refuerzo USB a más de 500 mA">
+                </a>
+                <h3 class="product-title">Cargador PowerBoost 500 - Batería recargable de polímero de litio de 5 V con refuerzo USB a más de 500 mA</h3>
+                <p class="product-price">$14.95</p>
+                <a href="b9.html" class="btn">Comprar</a>
+            </div>
+
+            <div class="product-card">
+               <a href="b10.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/1905-07.jpg" alt="Cargador USB Mini Lipo/LiPo de Adafruit con conector USB Mini-B - v1">
+                   </a>
+                <h3 class="product-title">Cargador USB Mini Lipo/LiPo de Adafruit con conector USB Mini-B - v1</h3>
+                <p class="product-price">$35.00</p>
+                <a href="b10.html" class="btn">Comprar</a>
+            </div>
+
+
+             <div class="product-card">
+                <a href="b11.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/390-06.jpg" alt="Cargador USB/CC/Solar de iones de litio/polímero - Rev C">
+                </a>
+                <h3 class="product-title">Cargador USB/CC/Solar de iones de litio/polímero - Rev C</h3>
+                <p class="product-price">$17.50</p>
+                <a href="b11.html" class="btn">Comprar</a>
+            </div>
+
+<div class="product-card">
+                <a href="b12.html">
+                <img src="https://cdn-shop.adafruit.com/970x728/1566-11.jpg" alt="Batería USB para Raspberry Pi - 10000 mAh - 2 salidas de 5 V">
+                </a>
+                <h3 class="product-title">Batería USB para Raspberry Pi - 10000 mAh - 2 salidas de 5 V</h3>
+                <p class="product-price">$39.95</p>
+                <a href="b12.html" class="btn">Comprar</a>
+            </div>
+
+         </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 MAD Components Store. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

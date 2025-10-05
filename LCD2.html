@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Pantalla gráfica OLED monocromática de 1,3" y 128 x 64 - STEMMA QT / Qwiic  </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2em 0;
+        }
+
+        .product-detail-card {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-header {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 1.5em;
+        }
+        
+        .product-main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            margin-bottom: 2em;
+        }
+
+        .description-section {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .image-specs-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .product-image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .additional-specs {
+            margin-top: 2em;
+            padding-top: 1.5em;
+            border-top: 1px solid #eee;
+        }
+
+        .additional-specs h3 {
+            color: #007bff;
+        }
+
+        .additional-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .additional-specs ul li {
+            background-color: #f9f9f9;
+            margin-bottom: 0.5em;
+            padding: 0.8em;
+            border-radius: 4px;
+        }
+        .additional-specs ul li strong {
+            color: #e67e22;
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #e67e22;
+            font-weight: bold;
+            margin-bottom: 1.5em;
+            text-align: right;
+        }
+        
+        .purchase-options {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            margin-top: 1em;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .quantity-control button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .quantity-control input {
+            width: 3em;
+            text-align: center;
+            border: none;
+            font-size: 1em;
+            -moz-appearance: textfield; /* Para Firefox */
+        }
+        .quantity-control input::-webkit-outer-spin-button,
+        .quantity-control input::-webkit-inner-spin-button {
+            -webkit-appearance: none; /* Para Chrome, Safari, Edge */
+            margin: 0;
+        }
+        .add-to-cart-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #218838;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .total-price {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #e67e22;
+            text-align: right;
+            margin-top: 1em;
+        }
+        .total-price span {
+            font-size: 0.8em;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .product-main-content {
+                flex-direction: column;
+            }
+            .description-section, .image-specs-section {
+                flex: none;
+                width: 100%;
+                min-width: unset;
+            }
+            .product-price {
+                text-align: left;
+            }
+            .purchase-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="catalogo.html" class="back-link">&larr; Volver al Catálogo</a>
+
+        <div class="product-detail-card">
+            <h1 class="product-header">Pantalla gráfica OLED monocromática de 1,3" y 128 x 64 - STEMMA QT / Qwiic</h1>
+            
+            <div class="product-main-content">
+                
+                <div class="description-section">
+                    <p>Estas pantallas son pequeñas, de tan solo 1,3" en diagonal, pero muy legibles gracias al alto contraste de una pantalla OLED. Esta pantalla está compuesta por 128x64 píxeles OLED blancos individuales, cada uno de los cuales se activa o desactiva mediante el chip controlador. Como la pantalla genera su propia luz, no requiere retroiluminación. Esto reduce el consumo de energía para el funcionamiento de la pantalla OLED y es la razón por la que tiene un contraste tan alto; ¡nos encanta esta pantalla en miniatura por su nitidez!
+
+El chip controlador SSD1306 puede comunicarse de dos maneras: I₂C o SPI. El OLED requiere una fuente de alimentación de 3,3 V y niveles lógicos de 3,3 V para la comunicación, pero incluimos un regulador de 3,3 V y todos los pines están completamente desplazados para que pueda usarlo con dispositivos de 3 o 5 V.
+
+Hemos actualizado el diseño para añadir circuitos de reinicio automático, de modo que el pin de reinicio sea opcional. La interfaz predeterminada ahora es I2C, no SPI . Como usa I2C, puedes conectarlo fácilmente con solo dos cables (¡más alimentación y tierra!). Incluso hemos incluido conectores STEMMA QT compatibles con SparkFun qwiic  para el bus I2C, ¡así que no necesitas soldar! El cable QT no está incluido , pero tenemos varios en la tienda .
+</p>
+                 
+                        <p id="product-base-price" style="display: none;">19.95</p>
+                    
+                    <div class="purchase-options">
+                        <div class="quantity-control">
+                            <button onclick="changeQuantity(-1)">-</button>
+                            <input type="number" id="quantity" value="1" min="1">
+                            <button onclick="changeQuantity(1)">+</button>
+                        </div>
+
+                        <button class="add-to-cart-btn" onclick="addToCart()">Añadir al Carrito</button>
+
+
+                    </div>
+
+                    <p class="total-price">
+                        Total: $<span id="total-price">19.95</span>
+                    </p>
+                </div>
+
+                <div class="image-specs-section">
+                    <div class="product-image-gallery">
+                        <img src="https://cdn-shop.adafruit.com/970x728/938-13.jpg">
+                        <img src="https://cdn-shop.adafruit.com/970x728/938-16.jpg">
+                        <img src="https://cdn-shop.adafruit.com/970x728/938-14.jpg">
+                         <img src="https://cdn-shop.adafruit.com/970x728/938-22.jpg">
+                    </div>
+
+                    <div class="additional-specs">
+                        <h3>Especificaciones Técnicas</h3>
+                        <ul>
+                            <li><strong>dimensiones </strong>
+30,5 mm x 28 mm / 1,2" x 1,1"</li>
+
+
+                            <li><strong>	Diámetro del orificio de montaje:</strong>  2,5 mm / 0,1"</li>
+                             <li><strong>	Pantalla:</strong> 34,5 mm x 23 mm / 1,3" x 0,9" </li>
+                              <li><strong>	Profundidad de color: </strong>Monocromo (blanco) </li>
+                                <li><strong>	Número de píxeles: 128 × 64 </strong>128 × 64</li>
+  <li><strong>	Tamaño de pantalla diagonal:</strong> 1,30 </li>
+                             <li><strong>	Paso de píxeles (mm): </strong> 0,23 x 0,23 </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="full-description">
+                <h3>Información de Seguridad y Uso</h3>
+                <p> Necesitará un microcontrolador con más de 1 KB de RAM, ya que la pantalla debe tener búfer. La biblioteca puede imprimir texto, mapas de bits, píxeles, rectángulos, círculos y líneas. Utiliza 1 KB de RAM, ya que necesita búferizar toda la pantalla, ¡pero es muy rápida! El código es fácil de adaptar a cualquier otro microcontrolador.
+
+Tenga en cuenta que las pantallas OLED están compuestas por cientos de... ¡OLED! Esto significa que cada píxel es un pequeño LED orgánico, y si se mantiene encendido durante más de 1000 horas, su brillo comenzará a atenuarse. Si desea mantener la pantalla con un brillo uniforme, apáguela (desactive los píxeles) cuando no la necesite para evitar que se atenúen.
+
+
+                </p>
+
+               <h3>Sobre nosotros</h3> 
+
+                   <p> La innovación está en manos de todos los que quieren mejorar su vida rompiendo barreras tecnológicas. A través de la creación, producción y soporte de hardware y software electrónicos, Arduino proporciona un acceso sencillo a tecnologías de vanguardia que interactúan con el mundo real. Únete a una comunidad mundial alrededor de esta plataforma de código abierto y da vida a una innovación tecnológica simple o innovadora a través de herramientas simples pero potentes
+                </p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        const basePrice = 19.95;
+        const quantityInput = document.getElementById('quantity');
+        const totalPriceElement = document.getElementById('total-price');
+
+        // Función para cambiar la cantidad y actualizar el precio
+        function updatePrice() {
+            const quantity = parseInt(quantityInput.value);
+            const total = (basePrice * quantity).toFixed(2);
+            totalPriceElement.textContent = total;
+        }
+
+        // Función para los botones de + y -
+        function changeQuantity(amount) {
+            let currentQuantity = parseInt(quantityInput.value);
+            currentQuantity += amount;
+            if (currentQuantity < 1) {
+                currentQuantity = 1;
+            }
+            quantityInput.value = currentQuantity;
+            updatePrice();
+        }
+
+        // Escuchar cambios en el input de cantidad para actualizar el precio
+        quantityInput.addEventListener('input', () => {
+            let quantity = parseInt(quantityInput.value);
+            if (isNaN(quantity) || quantity < 1) {
+                quantityInput.value = 1;
+            }
+            updatePrice();
+        });
+
+        // Función para guardar el pedido y redirigir
+        function addToCart() {
+            const quantity = parseInt(quantityInput.value);
+            const total = (basePrice * quantity).toFixed(2);
+            
+            // Guardar los datos del pedido en el almacenamiento local del navegador
+            const orderData = {
+                productName: "Batería de iones de litio",
+                price: basePrice,
+                quantity: quantity,
+                total: total
+            };
+            localStorage.setItem('currentOrder', JSON.stringify(orderData));
+
+            // Redirigir a la página de compra
+            window.location.href = 'compras.html';
+        }
+    </script>
+
+</body>
+</html>
